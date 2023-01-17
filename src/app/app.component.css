@@ -1,0 +1,124 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+   }
+   
+   .app-header {
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 2px solid rgb(255, 179, 37);
+   }
+   .brand {
+	color: rgb(255, 179, 37);
+   }
+   
+   .main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	height: 380px;
+	margin-top: 50px;
+	flex-wrap: wrap;
+   }
+   .form-container {
+	padding: 20px;
+   }
+   .main-container > div {
+	height: 80%;
+	box-sizing: border-box;
+	width: 35%;
+	border: 1px solid rgba(0, 0, 0, 0.349);
+	border-radius: 5px;
+	min-width: 350px;
+   }
+   .form-group {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-around;
+	height: 244px;
+   }
+   .form-group input,
+   select {
+	display: block;
+	width: max(300px, 30vw);
+	padding: 5px;
+	margin: 5px 0;
+	font-weight: 500;
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.404);
+	border-radius: 5px;
+   }
+   form {
+	display: block;
+   }
+   label {
+	color: rgb(154, 154, 154);
+   }
+   option {
+	font-size: 18px;
+	padding: 5px 0;
+   }
+   
+   .btn-container {
+	display: flex;
+	width: 350px;
+	justify-content: space-around;
+	align-items: center;
+   }
+   .btn-container > button {
+	padding: 8px 30px;
+	border: 1px solid rgb(255, 194, 81);
+	border-radius: 3px;
+	background-color: rgb(255, 181, 43);
+	font-weight: 700;
+	color: white;
+	font-size: 12px;
+   }
+   .btn-container > button:active,td>button:active {
+	background-color: rgb(215, 140, 0);
+   }
+   table {
+	width: 100%;
+	text-align: center;
+	border: none;
+   }
+   table tr > td,
+   th {
+	padding: 10px 0 !important;
+   }
+   table tr td {
+	border-bottom: 2px solid rgb(120, 120, 120);
+   }
+   thead {
+	color: rgb(255, 181, 43);
+   }
+   
+   td > button {
+	padding: 5px 10px;
+	margin: 0 5px;
+	background-color: rgb(255, 181, 43);
+	color: white;
+	border: none;
+	font-weight: 700;
+	font-size: 12px;
+	border-radius: 3px;
+   }
+
+   .display-container {
+	overflow-y: scroll;
+   }
+   .display-container::-webkit-scrollbar {
+	width: 5px;
+   }
+   .display-container::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 2px;
+   }
+   .head-table {
+	background: rgb(75, 75, 75);
+	position:sticky ;
+	top: 0;
+   }

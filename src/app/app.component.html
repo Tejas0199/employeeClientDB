@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1 class="app-header"><span class="brand">IDSNEXT</span> Assignment...!</h1>
+  <div class="main-container">
+    <div class="form-container">
+      <form (submit)="onSubmit" [formGroup]="employee">
+        <div class="form-group">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <select formControlName="description" id="description">
+              <option *ngFor="let descrip of alldescriptions" [value]="descrip"
+                >{{descrip}}</option
+              >
+            </select>
+          </div>
+          <div>
+            <label for="name">Salary</label>
+            <input
+              type="number"
+              maxlength="5"
+              pattern="[1-9][0-9]{4}"
+              id="name"
+              formControlName="salary"
+            />
+          </div>
+          <div class="btn-container">
+            <button class="btn" type="button" (click)="onReset()">RESET</button>
+            <button class="btn" type="button" (click)="onSubmit()">SAVE</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="display-container">
+      <table class="head-table">
+        <thead >
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>salary</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+      <table>
+        <tbody>
+          <tr *ngFor="let employee of allEmployees; let i = index">
+            <td>{{employee.name}}</td>
+            <td>{{employee.description}}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+              <button class="" (click)="onDelete(i)">D</button>
+              <button (click)="onEdit(i)">E</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
